@@ -54,7 +54,7 @@ export default function Reviews() {
           <p className="text-lg sm:text-xl font-semibold">実際の公式ラインでの講座生の生の声となっています！</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {shuffledImages.map((image, index) => (
             <div
               key={index}
@@ -66,7 +66,7 @@ export default function Reviews() {
                   alt={`受講生の声 ${index + 1}`}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                 />
               </div>
             </div>
