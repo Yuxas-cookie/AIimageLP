@@ -41,7 +41,7 @@ export default function Testimonials() {
   return (
     <section className="section-padding bg-white">
       <div className="section-container">
-        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-12 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-8 sm:mb-10 md:mb-12 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent px-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
           実績者の声
         </h2>
         <Timeline items={testimonials} />

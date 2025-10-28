@@ -161,7 +161,7 @@ export function Timeline({ items, className }: TimelineProps) {
                     )}>
                       <CardContent className="p-4 sm:p-6">
                         <div className="mb-4">
-                          <div className="flex items-center justify-between gap-4 mb-3">
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-3">
                             <motion.h3
                               className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300"
                               layoutId={`title-${index}`}
@@ -171,7 +171,7 @@ export function Timeline({ items, className }: TimelineProps) {
 
                             {item.amount && (
                               <motion.div
-                                className="relative flex-shrink-0"
+                                className="relative sm:flex-shrink-0"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.2 }}
                               >

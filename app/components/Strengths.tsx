@@ -154,18 +154,18 @@ export default function Strengths() {
   return (
     <section className="section-padding bg-white">
       <div className="section-container">
-        <div className="bg-gradient-to-r from-navy via-blue-700 to-navy py-6 px-4 rounded-lg mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+        <div className="bg-gradient-to-r from-navy via-blue-700 to-navy py-4 sm:py-6 px-4 rounded-lg mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
             本講座が選ばれている理由
           </h2>
         </div>
-        <div className="flex flex-col items-center mb-8">
+        <div className="flex flex-col items-center mb-6 sm:mb-8 px-4">
           <Image
             src="/images/強み.svg"
             alt="強み"
             width={400}
             height={400}
-            className="w-full max-w-md mx-auto"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto"
           />
         </div>
         <Timeline data={data} />

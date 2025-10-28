@@ -83,14 +83,14 @@ export default function Reviews() {
     return (
       <section className="section-padding bg-gray-50">
         <div className="section-container">
-          <h2 className="text-2xl lg:text-3xl font-bold text-center mb-6 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-4 sm:mb-6 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent px-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
             講座生の声
           </h2>
-          <div className="text-center text-gray-600 mb-12">
-            <p className="text-lg font-semibold">実際の公式ラインでの講座生の生の声となっています！</p>
+          <div className="text-center text-gray-600 mb-8 sm:mb-10 md:mb-12 px-4">
+            <p className="text-base sm:text-lg font-semibold">実際の公式ラインでの講座生の生の声となっています！</p>
           </div>
-          <div className="w-full max-w-screen-xl mx-auto">
-            <p className="text-center text-gray-500">読み込み中...</p>
+          <div className="w-full max-w-screen-xl mx-auto px-4">
+            <p className="text-center text-gray-500 text-sm sm:text-base">読み込み中...</p>
           </div>
         </div>
       </section>
@@ -100,11 +100,11 @@ export default function Reviews() {
   return (
     <section className="section-padding bg-gray-50">
       <div className="section-container">
-        <h2 className="text-2xl lg:text-3xl font-bold text-center mb-6 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-4 sm:mb-6 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent px-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
           講座生の声
         </h2>
-        <div className="text-center text-gray-600 mb-12">
-          <p className="text-lg font-semibold">実際の公式ラインでの講座生の生の声となっています！</p>
+        <div className="text-center text-gray-600 mb-8 sm:mb-10 md:mb-12 px-4">
+          <p className="text-base sm:text-lg font-semibold">実際の公式ラインでの講座生の生の声となっています！</p>
         </div>
         <div className="w-full max-w-screen-xl mx-auto">
           <Masonry data={reviewData} />
