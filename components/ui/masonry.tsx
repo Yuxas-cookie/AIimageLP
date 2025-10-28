@@ -17,9 +17,10 @@ interface GridItem extends MasonryItem {
 
 interface MasonryProps {
   data: MasonryItem[];
+  onImageClick?: (image: string) => void;
 }
 
-function Masonry({ data }: MasonryProps) {
+function Masonry({ data, onImageClick }: MasonryProps) {
   const [columns, setColumns] = useState<number>(2);
 
   useEffect(() => {
@@ -148,7 +149,10 @@ function Masonry({ data }: MasonryProps) {
           style={style}
           className="absolute p-[15px] [will-change:transform,width,height,opacity]"
         >
-          <div className="relative w-full h-full rounded-[4px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] transition duration-300 ease hover:scale-105 bg-white">
+          <div
+            className="relative w-full h-full rounded-[4px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] transition duration-300 ease hover:scale-105 bg-white cursor-pointer"
+            onClick={() => onImageClick?.(item.image)}
+          >
             <img
               src={item.image}
               alt=""

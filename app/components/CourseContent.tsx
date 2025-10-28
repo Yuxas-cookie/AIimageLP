@@ -1,4 +1,8 @@
+"use client";
 import { FeatureSteps } from "@/components/ui/feature-section";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function CourseContent() {
   const features = [
@@ -40,13 +44,101 @@ export default function CourseContent() {
     }
   ];
 
+  const [isMobile, setIsMobile] = useState(false);
+  const [visibleItems, setVisibleItems] = useState<boolean[]>([]);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const updateView = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    updateView();
+    window.addEventListener("resize", updateView);
+    return () => window.removeEventListener("resize", updateView);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const observers = features.map((_, index) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleItems((prev) => {
+                const newVisible = [...prev];
+                newVisible[index] = true;
+                return newVisible;
+              });
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      if (itemRefs.current[index]) {
+        observer.observe(itemRefs.current[index]!);
+      }
+
+      return observer;
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, [isMobile, features.length]);
+
   return (
     <section className="bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50 py-8 md:py-12">
-      <FeatureSteps
-        features={features}
-        title="講座内容"
-        autoPlayInterval={4000}
-      />
+      {isMobile ? (
+        <div className="section-container">
+          <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent">
+            講座内容
+          </h2>
+          <div className="space-y-12">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                ref={(el) => {
+                  itemRefs.current[index] = el;
+                }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={
+                  visibleItems[index]
+                    ? { opacity: 1, y: 0 }
+                    : { opacity: 0, y: 30 }
+                }
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-col gap-4"
+              >
+                <div className="w-full max-w-xs mx-auto">
+                  <Image
+                    src={feature.image}
+                    alt={feature.title}
+                    width={300}
+                    height={300}
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="text-center px-4">
+                  <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent">
+                    {feature.title}
+                  </h3>
+                  <p className="text-base text-gray-700 leading-relaxed">
+                    {feature.content}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <FeatureSteps
+          features={features}
+          title="講座内容"
+          autoPlayInterval={4000}
+        />
+      )}
     </section>
   );
 }
