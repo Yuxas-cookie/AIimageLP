@@ -26,10 +26,8 @@ function Masonry({ data }: MasonryProps) {
     const updateColumns = () => {
       if (window.matchMedia("(min-width: 1024px)").matches) {
         setColumns(3);
-      } else if (window.matchMedia("(min-width: 640px)").matches) {
-        setColumns(2);
       } else {
-        setColumns(1);
+        setColumns(2);
       }
     };
 
