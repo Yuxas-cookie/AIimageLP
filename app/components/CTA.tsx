@@ -2,7 +2,7 @@ export default function CTA() {
   return (
     <section className="section-padding bg-white">
       <div className="section-container text-center">
-        <h2 className="text-2xl lg:text-3xl font-bold text-navy mb-8">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-8 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
           今すぐ始めて、<br className="sm:hidden" />
           新しい収入源を手に入れよう
         </h2>

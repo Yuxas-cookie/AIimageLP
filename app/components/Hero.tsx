@@ -1,14 +1,49 @@
+"use client";
+import { motion } from "framer-motion";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-navy to-navy-light py-24 lg:py-32 text-center mt-[65px]">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-          AI画像生成マスター講座
+    <AuroraBackground className="mt-[65px] h-[80vh] lg:h-[90vh]">
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col gap-6 items-center justify-center px-4 max-w-6xl"
+      >
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center leading-tight tracking-tight bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent dark:from-white dark:via-gray-100 dark:to-white">
+          AI画像生成<br className="sm:hidden" />マスター講座
         </h2>
-        <p className="text-lg lg:text-xl text-white/95">
+        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 dark:text-white/95 text-center font-medium">
           スキルゼロから稼ぐ力をつける実践講座
         </p>
-      </div>
-    </section>
+
+        {/* 3つの特徴 */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-4">
+          <div className="flex items-center gap-2 bg-white/90 dark:bg-navy/90 px-4 py-3 rounded-lg shadow-md backdrop-blur-sm">
+            <span className="text-accent text-xl font-bold">✓</span>
+            <span className="font-semibold text-sm sm:text-base bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent dark:from-white dark:via-gray-100 dark:to-white">
+              受講生1000人突破
+            </span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/90 dark:bg-navy/90 px-4 py-3 rounded-lg shadow-md backdrop-blur-sm">
+            <span className="text-accent text-xl font-bold">✓</span>
+            <span className="font-semibold text-sm sm:text-base bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent dark:from-white dark:via-gray-100 dark:to-white">
+              24時間サポート体制
+            </span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/90 dark:bg-navy/90 px-4 py-3 rounded-lg shadow-md backdrop-blur-sm">
+            <span className="text-accent text-xl font-bold">✓</span>
+            <span className="font-semibold text-sm sm:text-base bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent dark:from-white dark:via-gray-100 dark:to-white">
+              最高月400万達成
+            </span>
+          </div>
+        </div>
+      </motion.div>
+    </AuroraBackground>
   );
 }

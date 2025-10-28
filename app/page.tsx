@@ -4,9 +4,10 @@ import Hero from './components/Hero';
 import Problems from './components/Problems';
 import Empathy from './components/Empathy';
 import Stats from './components/Stats';
+import Transition from './components/Transition';
 import Solution from './components/Solution';
 import Testimonials from './components/Testimonials';
-import Curriculum from './components/Curriculum';
+import CourseContent from './components/CourseContent';
 import Strengths from './components/Strengths';
 import Reviews from './components/Reviews';
 import CTA from './components/CTA';
@@ -23,9 +24,10 @@ export default function Home() {
         <Problems />
         <Empathy />
         <Stats />
+        <Transition />
         <Solution />
         <Testimonials />
-        <Curriculum />
+        <CourseContent />
         <Strengths />
         <Reviews />
         <CTA />

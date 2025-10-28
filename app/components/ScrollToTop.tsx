@@ -11,7 +11,7 @@ export default function ScrollToTop() {
     };
 
     window.addEventListener('scroll', toggleVisibility);
-    toggleVisibility(); // 初期値設定
+    toggleVisibility();
 
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
@@ -26,12 +26,23 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-5 right-5 w-12 h-12 bg-navy text-white rounded
-        shadow-lg transition-all duration-300 hover:bg-navy-light z-50 flex items-center justify-center
-        ${isVisible ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
+      className={`fixed bottom-6 right-6 w-12 h-12 rounded-full shadow-xl
+        transition-all duration-300 flex items-center justify-center z-50
+        ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}
+      style={{
+        background: 'linear-gradient(145deg, #1e3a8a 0%, #3b82f6 45%, #1e40af 100%)',
+        boxShadow: '0 4px 15px rgba(0,0,0,0.3), inset 0 1px 0 rgba(96, 165, 250, 0.5), inset 0 -1px 0 rgba(0,0,0,0.2)'
+      }}
       aria-label="ページトップへ戻る"
     >
-      <span className="text-xl">▲</span>
+      <div
+        className="w-0 h-0"
+        style={{
+          borderLeft: '8px solid transparent',
+          borderRight: '8px solid transparent',
+          borderBottom: '18px solid #ffffff',
+        }}
+      />
     </button>
   );
 }
