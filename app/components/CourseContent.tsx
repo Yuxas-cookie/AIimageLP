@@ -33,8 +33,8 @@ export default function CourseContent() {
       image: "/images/オフ会.svg"
     },
     {
-      step: "サポート",
-      title: "サポート",
+      step: "個別サポート等",
+      title: "個別サポート等",
       content: "そのほかにも質問チャット、個別対応、オープンチャットで充実のサポート体制",
       image: "/images/サポート体制.svg"
     }
