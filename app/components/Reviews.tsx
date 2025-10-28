@@ -49,7 +49,7 @@ export default function Reviews() {
       const dataWithDimensions = await Promise.all(
         shuffledImages.map((image, index) => {
           return new Promise<{id: number; image: string; height: number}>((resolve) => {
-            const img = new Image();
+            const img = document.createElement('img');
             img.onload = () => {
               // Use actual image aspect ratio without variation
               const aspectRatio = img.height / img.width;
