@@ -39,7 +39,7 @@ export default function CourseContent() {
   return (
     <section className="section-padding bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50">
       <div className="section-container">
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-8 sm:mb-10 md:mb-12 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent px-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent px-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
           講座内容
         </h2>
 
@@ -66,10 +66,10 @@ export default function CourseContent() {
                     <span className="text-sm sm:text-base font-bold">{index + 1}</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
                       {feature.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
                       {feature.content}
                     </p>
                   </div>

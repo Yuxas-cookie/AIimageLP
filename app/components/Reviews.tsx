@@ -47,11 +47,11 @@ export default function Reviews() {
   return (
     <section className="section-padding bg-gray-50">
       <div className="section-container">
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-4 sm:mb-6 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent px-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent px-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
           講座生の声
         </h2>
         <div className="text-center text-gray-600 mb-8 sm:mb-10 md:mb-12 px-4">
-          <p className="text-base sm:text-lg font-semibold">実際の公式ラインでの講座生の生の声となっています！</p>
+          <p className="text-lg sm:text-xl font-semibold">実際の公式ラインでの講座生の生の声となっています！</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">

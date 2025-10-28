@@ -155,7 +155,7 @@ export default function Strengths() {
     <section className="section-padding bg-white">
       <div className="section-container">
         <div className="bg-gradient-to-r from-navy via-blue-700 to-navy py-4 sm:py-6 px-4 rounded-lg mb-6 sm:mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
             本講座が選ばれている理由
           </h2>
         </div>

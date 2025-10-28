@@ -12,7 +12,7 @@ export default function Problems() {
   return (
     <section className="section-padding bg-white">
       <div className="content-container">
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-8 sm:mb-10 text-center bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10 text-center bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
           こんなお悩みはありませんか？
         </h2>
 
@@ -31,14 +31,14 @@ export default function Problems() {
           <ul className="space-y-3 sm:space-y-4">
             {problems.map((problem, index) => (
               <li key={index} className="flex items-start pb-3 sm:pb-4 border-b border-gray-100 last:border-b-0">
-                <span className="text-accent mr-2 sm:mr-3 font-bold text-sm sm:text-base">●</span>
-                <span className="text-gray-700 text-sm sm:text-base">{problem}</span>
+                <span className="text-accent mr-2 sm:mr-3 font-bold text-base sm:text-lg">●</span>
+                <span className="text-gray-700 text-base sm:text-lg md:text-xl">{problem}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="mt-8 sm:mt-10 space-y-6 sm:space-y-8 text-gray-700 leading-loose text-sm sm:text-base md:text-lg text-center">
+        <div className="mt-8 sm:mt-10 space-y-6 sm:space-y-8 text-gray-700 leading-loose text-base sm:text-lg md:text-xl text-center">
           <p>
             日本では物価が上昇し続ける一方で、給料はなかなか上がらない状況が続いています。
             <br />

@@ -37,7 +37,7 @@ export default function Testimonials() {
   return (
     <section className="section-padding bg-white">
       <div className="section-container">
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-8 sm:mb-10 md:mb-12 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent px-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent px-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
           実績者の声
         </h2>
 
@@ -74,11 +74,11 @@ export default function Testimonials() {
                     </div>
                   </div>
 
-                  <p className="text-sm sm:text-base font-semibold text-gray-600 mb-4">
+                  <p className="text-base sm:text-lg font-semibold text-gray-600 mb-4">
                     {testimonial.category}
                   </p>
 
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                     {testimonial.description}
                   </p>
 
