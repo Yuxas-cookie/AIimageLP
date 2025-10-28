@@ -15,7 +15,7 @@ export default function Hero() {
         }}
         className="relative flex flex-col gap-4 sm:gap-6 items-center justify-center px-4 max-w-6xl mx-auto w-full"
       >
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-center leading-tight tracking-tight bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent dark:from-white dark:via-gray-100 dark:to-white">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-center leading-tight tracking-tight bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent dark:from-white dark:via-gray-100 dark:to-white">
           AI画像生成<br className="sm:hidden" />マスター講座
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-700 dark:text-white/95 text-center font-medium px-2">
