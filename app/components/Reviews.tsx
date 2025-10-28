@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import { Component as Masonry } from "@/components/ui/masonry";
 import { useState, useEffect } from "react";
 
 const reviewImages = [
@@ -37,12 +37,66 @@ const reviewImages = [
 ];
 
 export default function Reviews() {
-  const [shuffledImages, setShuffledImages] = useState<string[]>([]);
+  const [reviewData, setReviewData] = useState<Array<{id: number; image: string; height: number}>>([]);
 
   useEffect(() => {
-    // Shuffle images on mount
-    setShuffledImages([...reviewImages].sort(() => Math.random() - 0.5));
+    const loadImageDimensions = async () => {
+      // Shuffle the images array for random order
+      const shuffledImages = [...reviewImages].sort(() => Math.random() - 0.5);
+
+      const dataWithDimensions = await Promise.all(
+        shuffledImages.map((image, index) => {
+          return new Promise<{id: number; image: string; height: number}>((resolve) => {
+            const img = new Image();
+            img.onload = () => {
+              // Use actual image aspect ratio
+              const aspectRatio = img.height / img.width;
+              // Add variation to height (0.85-1.15x) to create more diverse sizes
+              const variationFactor = 0.85 + Math.random() * 0.3;
+              const estimatedHeight = 400 * aspectRatio * variationFactor;
+              resolve({
+                id: index,
+                image: image,
+                height: estimatedHeight,
+              });
+            };
+            img.onerror = () => {
+              // If image fails to load, use a default estimated height with variation
+              const variationFactor = 0.85 + Math.random() * 0.3;
+              resolve({
+                id: index,
+                image: image,
+                height: 500 * variationFactor,
+              });
+            };
+            img.src = image;
+          });
+        })
+      );
+
+      setReviewData(dataWithDimensions);
+    };
+
+    loadImageDimensions();
   }, []);
+
+  if (reviewData.length === 0) {
+    return (
+      <section className="section-padding bg-gray-50">
+        <div className="section-container">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-6 bg-gradient-to-r from-navy via-blue-500 to-navy-light bg-clip-text text-transparent px-4" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+            講座生の声
+          </h2>
+          <div className="text-center text-gray-600 mb-8 sm:mb-10 md:mb-12 px-4">
+            <p className="text-lg sm:text-xl font-semibold">実際の公式ラインでの講座生の生の声となっています！</p>
+          </div>
+          <div className="w-full max-w-screen-xl mx-auto px-4">
+            <p className="text-center text-gray-500 text-sm sm:text-base">読み込み中...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="section-padding bg-gray-50">
@@ -53,24 +107,8 @@ export default function Reviews() {
         <div className="text-center text-gray-600 mb-8 sm:mb-10 md:mb-12 px-4">
           <p className="text-lg sm:text-xl font-semibold">実際の公式ラインでの講座生の生の声となっています！</p>
         </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-          {shuffledImages.map((image, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200"
-            >
-              <div className="relative w-full" style={{ paddingBottom: '133%' }}>
-                <Image
-                  src={image}
-                  alt={`受講生の声 ${index + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                />
-              </div>
-            </div>
-          ))}
+        <div className="w-full max-w-screen-xl mx-auto">
+          <Masonry data={reviewData} />
         </div>
       </div>
     </section>
