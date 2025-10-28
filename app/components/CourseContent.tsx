@@ -1,11 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
 
 export default function CourseContent() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   const features = [
     {
       title: "Webコンテンツ",
@@ -46,63 +43,40 @@ export default function CourseContent() {
           講座内容
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
-          {/* 左側：ステップリスト */}
-          <div className="space-y-4">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`p-4 sm:p-6 rounded-xl cursor-pointer transition-all duration-300 border-2 ${
-                  activeIndex === index
-                    ? 'bg-white border-navy shadow-lg scale-105'
-                    : 'bg-white/50 border-gray-200 hover:border-navy/50 hover:shadow-md'
-                }`}
-              >
+        <div className="max-w-4xl mx-auto space-y-8 sm:space-y-10 md:space-y-12">
+          {features.map((feature, index) => (
+            <div key={index} className="space-y-4 sm:space-y-6">
+              {/* 画像 */}
+              <div className="bg-white rounded-xl shadow-2xl border-2 border-navy/10 overflow-hidden p-6 sm:p-8">
+                <div className="relative w-full aspect-square max-w-md mx-auto">
+                  <Image
+                    src={feature.image}
+                    alt={feature.title}
+                    width={500}
+                    height={500}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* 項目 */}
+              <div className="bg-white rounded-xl shadow-lg border-2 border-navy p-4 sm:p-6">
                 <div className="flex items-start gap-3 sm:gap-4">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                    activeIndex === index
-                      ? 'bg-gradient-to-br from-navy via-blue-500 to-navy-light text-white'
-                      : 'bg-gray-200 text-gray-600'
-                  }`}>
-                    <span className="text-sm font-bold">{index + 1}</span>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-navy via-blue-500 to-navy-light text-white">
+                    <span className="text-sm sm:text-base font-bold">{index + 1}</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className={`text-base sm:text-lg font-bold mb-2 ${
-                      activeIndex === index
-                        ? 'bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent'
-                        : 'text-gray-700'
-                    }`} style={activeIndex === index ? {WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'} : {}}>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
                       {feature.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                       {feature.content}
                     </p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* 右側：画像 */}
-          <div className="lg:sticky lg:top-32 self-start">
-            <div className="bg-white rounded-xl shadow-2xl border-2 border-navy/10 overflow-hidden p-6 sm:p-8">
-              <div className="relative w-full aspect-square">
-                <Image
-                  src={features[activeIndex].image}
-                  alt={features[activeIndex].title}
-                  width={500}
-                  height={500}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="mt-4 text-center">
-                <h4 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
-                  {features[activeIndex].title}
-                </h4>
-              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
