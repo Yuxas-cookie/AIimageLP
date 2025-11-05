@@ -3,7 +3,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full h-16 bg-navy shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 h-full flex items-center justify-center sm:justify-start">
         <a
-          href="https://a-iimage-lp.vercel.app"
+          href="https://skh-hp.vercel.app"
           className="text-lg sm:text-xl font-semibold text-white hover:text-gray-200 transition-colors duration-200"
         >
           <h1>株式会社SKH</h1>
