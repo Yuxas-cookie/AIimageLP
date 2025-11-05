@@ -129,7 +129,7 @@ export default function Tokushoho() {
                   サービス提供時期
                 </th>
                 <td className="px-6 py-4 text-sm text-gray-900">
-                  お支払い確認後、3営業日以内に受講に必要なアカウント情報をメールにてお送りいたします
+                  お支払い確認後、3営業日以内を目安にwebコンテンツを配布いたします。
                 </td>
               </tr>
 
