@@ -34,7 +34,7 @@ export default function Tokushoho() {
                   所在地
                 </th>
                 <td className="px-6 py-4 text-sm text-gray-900">
-                  〒123-4567 東京都渋谷区〇〇〇町〇〇〇丁目12-3
+                  〒565-0842 大阪府吹田市千里山東2-4-3-201
                 </td>
               </tr>
 
@@ -43,7 +43,7 @@ export default function Tokushoho() {
                   電話番号
                 </th>
                 <td className="px-6 py-4 text-sm text-gray-900">
-                  03-1234-XXXX<br />
+                  090-3618-4320<br />
                   <span className="text-gray-600">受付時間 10:00 - 18:00（土日祝を除く）</span>
                 </td>
               </tr>
@@ -53,7 +53,7 @@ export default function Tokushoho() {
                   メールアドレス
                 </th>
                 <td className="px-6 py-4 text-sm text-gray-900">
-                  contact@skh-company.jp
+                  sekaino.hiroshi34@gmail.com
                 </td>
               </tr>
 
