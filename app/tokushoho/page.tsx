@@ -75,10 +75,10 @@ export default function Tokushoho() {
 
               <tr>
                 <th className="bg-gray-50 px-6 py-4 text-left text-sm font-semibold text-gray-700">
-                  講座料金
+                  商品販売価格
                 </th>
                 <td className="px-6 py-4 text-sm text-gray-900">
-                  各プランの詳細につきましては、無料相談時にご案内いたします
+                  各商品ページに記載の金額
                 </td>
               </tr>
 
