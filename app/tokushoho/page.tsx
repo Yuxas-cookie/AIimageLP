@@ -25,7 +25,7 @@ export default function Tokushoho() {
                   代表責任者
                 </th>
                 <td className="px-6 py-4 text-sm text-gray-900">
-                  橋本 泰浩
+                  片山 弘
                 </td>
               </tr>
 
