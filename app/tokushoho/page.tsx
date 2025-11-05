@@ -43,8 +43,7 @@ export default function Tokushoho() {
                   電話番号
                 </th>
                 <td className="px-6 py-4 text-sm text-gray-900">
-                  090-3618-4320<br />
-                  <span className="text-gray-600">受付時間 10:00 - 18:00（土日祝を除く）</span>
+                  090-3618-4320
                 </td>
               </tr>
 
