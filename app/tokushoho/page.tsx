@@ -148,14 +148,6 @@ export default function Tokushoho() {
                       </p>
                     </div>
                     <div>
-                      <p className="font-semibold mb-2">＜中途解約について＞</p>
-                      <p className="text-gray-700 leading-relaxed">
-                        クーリングオフ期間経過後も、将来に向かって中途解約が可能です。
-                        その場合、受講済み期間に応じた料金および所定の解約手数料を差し引いた金額を返金いたします。
-                        詳細は契約書面をご確認ください。
-                      </p>
-                    </div>
-                    <div>
                       <p className="font-semibold mb-2">＜お問い合わせ先＞</p>
                       <p className="text-gray-700">
                         返金・解約に関するご相談は、上記のメールアドレスまたは電話番号までお問い合わせください。
