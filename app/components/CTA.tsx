@@ -10,10 +10,15 @@ export default function CTA() {
           <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg">
             まずは無料相談で、あなたに最適なプランをご提案します
           </p>
-          <button className="bg-accent hover:bg-amber-600 text-white font-bold
-            py-3 sm:py-4 px-8 sm:px-12 rounded-lg text-lg sm:text-xl transition-colors duration-200 shadow-lg w-full sm:w-auto">
+          <a
+            href="https://forms.gle/dAPpzGfKaYnAd5B5A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-accent hover:bg-amber-600 text-white font-bold
+              py-3 sm:py-4 px-8 sm:px-12 rounded-lg text-lg sm:text-xl transition-colors duration-200 shadow-lg w-full sm:w-auto"
+          >
             無料相談を申し込む
-          </button>
+          </a>
         </div>
         <div className="text-sm sm:text-base text-gray-500 mt-4 sm:mt-6 px-4">
           ※お申し込み後、担当者より詳細をご連絡いたします
