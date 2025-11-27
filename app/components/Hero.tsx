@@ -33,12 +33,6 @@ export default function Hero() {
           <div className="flex-1 flex items-center justify-center gap-2 bg-white/90 dark:bg-navy/90 px-4 py-3 rounded-lg shadow-md backdrop-blur-sm">
             <span className="text-accent text-xl font-bold">✓</span>
             <span className="font-semibold text-base sm:text-base bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent dark:from-white dark:via-gray-100 dark:to-white whitespace-nowrap">
-              24時間サポート体制
-            </span>
-          </div>
-          <div className="flex-1 flex items-center justify-center gap-2 bg-white/90 dark:bg-navy/90 px-4 py-3 rounded-lg shadow-md backdrop-blur-sm">
-            <span className="text-accent text-xl font-bold">✓</span>
-            <span className="font-semibold text-base sm:text-base bg-gradient-to-r from-navy via-blue-600 to-navy-light bg-clip-text text-transparent dark:from-white dark:via-gray-100 dark:to-white whitespace-nowrap">
               最高月400万達成
             </span>
           </div>
